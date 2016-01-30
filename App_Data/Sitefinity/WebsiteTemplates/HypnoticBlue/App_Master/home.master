@@ -1,0 +1,72 @@
+<%@ Master Language="C#" AutoEventWireup="true" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hypnotic Blue</title>
+<script type="text/javascript">var switchTo5x=false;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher:'4d041819-6ef8-4f0f-9962-b0cca76ccec4'});</script>	
+</head>
+
+<body>
+<form id="form1" runat="server">
+<asp:ScriptManager ID="ScriptManager1" runat="server" />
+<div id="container"> 
+<div id="header">
+  <div id="logo"> 
+  <asp:contentplaceholder id="Logo" runat="server" />
+  </div><!--logo end -->
+  <div id="searchbox"> 
+  <asp:contentplaceholder id="SFSearch" runat="server" />
+  </div><!--searchbox end -->
+  <div id="topnavi">
+<asp:contentplaceholder id="HorizontalNavigationTop" runat="server" />
+</div><!--navigation end -->
+</div><!--header end -->
+<div id="maincontent">
+<div id="hypnoticslider">
+<asp:contentplaceholder id="SliderImages" runat="server" />
+</div><!--hypnoticslider end -->
+<h1> <asp:contentplaceholder id="Heading1" runat="server" /></h1>
+<asp:contentplaceholder id="SubHeadingContent" runat="server" />
+
+
+<div class="contentdivider"> </div>
+<div id="threecolumnshomepage">
+<div class="hpcolumnone">
+<asp:contentplaceholder id="Column1Home" runat="server" />
+</div>
+<div class="hpcolumnone">
+<asp:contentplaceholder id="Column2Home" runat="server" /></div>
+<div class="hpcolumnone">
+<asp:contentplaceholder id="Column3Home" runat="server" />
+</div> 
+<br style="clear: both;" />
+</div>
+
+
+
+
+ 
+</div> <!--maincontent end -->
+</div><!--container end -->
+<div id="footer">
+<div id="footercontent">
+
+  <div id="partnersbottom">
+  <asp:contentplaceholder id="AFooterMap" runat="server" /></a>
+  </div>
+  
+
+  </div> 
+<!--footer end -->
+<div id="bashfootera">
+<div id="bfcontent">
+<asp:contentplaceholder id="Copyright" runat="server" /> 
+</div>
+</div><!--bashfooter end -->
+</div><!--footer end -->
+</form>
+</body>
+</html>

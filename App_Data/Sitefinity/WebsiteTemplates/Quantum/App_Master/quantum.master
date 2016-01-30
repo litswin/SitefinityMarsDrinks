@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register Assembly="Telerik.Sitefinity" Namespace="Telerik.Sitefinity.Web.UI" TagPrefix="sf" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" runat="server" id="sfFrontendHtml">
+<head id="Head1" runat="server">
+    <link rel="shortcut icon" href="/favicon.ico?v=3" />
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600,700' rel='stylesheet' type='text/css' />
+</head>
+
+<body class="home page page-id-6 page-template page-template-templateshome-php blogid-5 group-blog slug-home">
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <sf:ResourceLinks ID="resourcesLinks" runat="server">
+            <sf:ResourceFile JavaScriptLibrary="JQuery"></sf:ResourceFile>            
+        </sf:ResourceLinks>
+        <div class="mm-page">
+            <div class="mm-page-wrap">
+                <div id="wrapper">
+                    <header class="FixedTop" id="site-header" role="banner">
+                        <nav class="FixedTop" id="top-nav">
+                            <div class="row">
+                                <div class="twelve columns">
+                                    <div id="toggle"></div>
+                                    <asp:ContentPlaceHolder ID="header" runat="server"/>
+                                </div>
+                            </div>
+                        </nav>
+                        <div id="header-bottom">
+			                <div class="row">
+				                <div class="twelve columns">
+                                    <asp:ContentPlaceHolder ID="headerBottom" runat="server"/>
+                    			</div>
+			                </div>
+		                </div>
+                    </header>
+                    
+                    <div>
+                        <asp:ContentPlaceHolder ID="PromoPlaceHolder" runat="server" />
+                    </div>
+
+                    <section class="hfeed site" id="page">
+                        <div class="site-content module">
+                                <div class="content-area primary pid_home" id="home">
+                                    <main class="site-main" id="main" role="main">
+                                        <asp:ContentPlaceHolder ID="content" runat="server" />
+                                    </main>
+                                </div>
+                        </div>                    
+
+                        <footer id="colophon" class="site-footer top-circles-bottom" role="contentinfo">
+                            <div class="row">
+			                    <div class="twelve columns">
+                                    <asp:ContentPlaceHolder ID="footer" runat="server" />
+                                </div>
+                            </div>
+                        </footer>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#toggle").on("click", function() {
+                $('body').toggleClass("navigation");
+            });
+
+            $(".browse-products").on("click", function() {
+                $('body').toggleClass("products");
+            });
+
+            $(".sffilterTitle").on("click", function() {
+                $('body').toggleClass("filters");
+            });
+        });
+        $('.toggle_button').click(function(){
+         if ( $('.promo').hasClass("active") ) {
+                $('.promo').removeClass("active");
+         }
+         else{
+                $('.promo').addClass("active");
+         }
+        });
+    </script>
+
+</body>
+</html>
