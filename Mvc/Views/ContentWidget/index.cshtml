@@ -1,8 +1,6 @@
 @using Telerik.Sitefinity.GenericContent.Model
 @model SitefinityWebApp.Mvc.Models.ContentWidgetModel
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 @if (Model.ContentItems != null && Model.ContentItems.Any())
 {
     <div class="content-area primary pid_home" id="home">
@@ -31,7 +29,7 @@
         <div class="shadow back-to-top"><a class="scroller red"></a></div>
     </section>
 }
-
+            
 <script>
     $(function () {
         $('div#home .shadow').click(function () {
